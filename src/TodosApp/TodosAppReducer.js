@@ -1,8 +1,8 @@
 import useMethods from "use-methods"
 
 const initialState = {
-	todo: "", // The current todos.
-	todos: [] // All the todos.
+	todo: "", // Current todo (new todo).
+	todos: [] // Current todos.
 }
 
 const reducer = state => ({
