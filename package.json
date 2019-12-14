@@ -1,5 +1,5 @@
 {
-  "name": "use-graphql.js",
+  "name": "use-graphql",
   "version": "0.1.0",
   "main": "build/use-graphql.js",
   "private": true,
