@@ -2,7 +2,7 @@ import fetchGraphQL from "./fetchGraphQL"
 import GraphQL from "../use-graphql"
 import invariant from "invariant"
 import React from "react"
-import sleep from "sleep.js"
+import sleep from "sleep"
 import useTodosReducer from "./TodosAppReducer"
 
 function TodosApp(props) {

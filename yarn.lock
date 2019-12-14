@@ -6877,7 +6877,7 @@ nth-check@^1.0.2, nth-check@~1.0.1:
 
 nullable@codex-src/nullable.js:
   version "0.1.0"
-  resolved "https://codeload.github.com/codex-src/nullable.js/tar.gz/49b9713f0595381c9d49e0a111c10205f647e53b"
+  resolved "https://codeload.github.com/codex-src/nullable.js/tar.gz/480a02fbb65a013cec9f423a80dd5e207934bca6"
 
 num2fraction@^1.2.2:
   version "1.2.2"
@@ -9236,9 +9236,9 @@ slash@^3.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
-sleep.js@codex-src/sleep.js:
+sleep@codex-src/sleep.js:
   version "0.1.0"
-  resolved "https://codeload.github.com/codex-src/sleep.js/tar.gz/6f668c9bd0b60210b5da28483f2ac4082c3f0bd6"
+  resolved "https://codeload.github.com/codex-src/sleep.js/tar.gz/04e1fb16caf93c232825b1f1aa437c826df30052"
   dependencies:
     invariant "^2.2.4"
 

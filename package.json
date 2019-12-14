@@ -50,7 +50,7 @@
     "minireset.css": "^0.0.6",
     "rollup": "^1.27.12",
     "rollup-plugin-babel": "^4.3.3",
-    "sleep.js": "codex-src/sleep.js",
+    "sleep": "codex-src/sleep.js",
     "use-methods": "^0.5.1"
   }
 }
