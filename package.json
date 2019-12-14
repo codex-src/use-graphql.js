@@ -11,14 +11,14 @@
     "nullable": "codex-src/nullable.js",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0"
+    "react-scripts": "3.3.0",
+    "serialize-javascript": "^2.1.1"
   },
   "scripts": {
     "start-server": "node src/TodosApp/server.js",
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
     "build": "yarn rollup -c rollup.config.js",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
