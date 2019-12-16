@@ -22,19 +22,19 @@ const schema = buildSchema(`
 const randomID = () => Math.random().toString(16).slice(2, 6)
 
 const initialState = [
-	{ id: randomID(), todo: "Grapes 🍇"      },
-	{ id: randomID(), todo: "Melons 🍈"      },
+	{ id: randomID(), todo: "Grapes 🍇" },
+	{ id: randomID(), todo: "Melons 🍈" },
 	{ id: randomID(), todo: "Watermelons 🍉" },
-	{ id: randomID(), todo: "Tangerines 🍊"  },
-	{ id: randomID(), todo: "Lemons 🍋"      },
-	{ id: randomID(), todo: "Bananas 🍌"     },
-	{ id: randomID(), todo: "Pineapples 🍍"  },
-	{ id: randomID(), todo: "Mangoes 🥭"     }
+	{ id: randomID(), todo: "Tangerines 🍊" },
+	{ id: randomID(), todo: "Lemons 🍋" },
+	{ id: randomID(), todo: "Bananas 🍌" },
+	{ id: randomID(), todo: "Pineapples 🍍" },
+	{ id: randomID(), todo: "Mangoes 🥭" },
 ]
 
 let todos = [...initialState]
 
-const root = ({
+const rootValue = ({
 	// Reset todos:
 	reset(args) {
 		todos = [...initialState]
@@ -48,7 +48,7 @@ const root = ({
 	addTodo(args) {
 		const todo = {
 			id:   randomID(),
-			todo: args.todo
+			todo: args.todo,
 		}
 		todos.unshift(todo)
 		return todo
@@ -58,7 +58,7 @@ const root = ({
 		const index = todos.findIndex(todo => todo.id === args.id)
 		todos.splice(index, 1)
 		return null
-	}
+	},
 })
 
 ;(() => {
@@ -67,9 +67,9 @@ const root = ({
 		"/graphql",
 		cors(),
 		graphqlHTTP({
-			schema: schema,
-			rootValue: root,
-			graphiql: true
+			schema,
+			rootValue,
+			graphiql: true,
 		})
 	)
 	app.listen(4000)

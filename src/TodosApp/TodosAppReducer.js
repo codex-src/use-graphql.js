@@ -1,8 +1,8 @@
 import useMethods from "use-methods"
 
 const initialState = {
-	todo: "", // Current todo (new todo).
-	todos: [] // Current todos.
+	todo: "",  // Current todo (new todo).
+	todos: [], // Current todos.
 }
 
 const reducer = state => ({
@@ -19,7 +19,7 @@ const reducer = state => ({
 	removeTodo(id) {
 		const index = state.todos.findIndex(todo => todo.id === id)
 		state.todos.splice(index, 1)
-	}
+	},
 })
 
 const useTodosAppReducer = () => useMethods(reducer, initialState)

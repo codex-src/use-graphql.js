@@ -12,7 +12,7 @@ const GraphQL = {
 	Provider: Context.Provider,
 	useLazyMutation,
 	useLazyQuery,
-	useQuery
+	useQuery,
 }
 
 export default GraphQL

@@ -18,7 +18,7 @@ function useQuery(query, variables = {}) {
 	const [queryState, setQueryState] = React.useState({
 		fetching: true,
 		errors: null,
-		data: null
+		data: null,
 	})
 
 	const client = React.useContext(Context.Context)
@@ -32,22 +32,21 @@ function useQuery(query, variables = {}) {
 					res = {
 						fetching: false,
 						errors: fetched.errors || null,
-						data: fetched.data
+						data: fetched.data,
 					}
 				} catch (error) {
 					res = {
 						fetching: false,
-						errors: [{
-							message: error.message
-						}],
-						data: null
+						errors: [{ message: error.message }],
+						data: null,
 					}
 				}
 				setQueryState(res)
 			}
 			effect()
 		}, [query, variables, client]),
-	[])
+		[]
+	)
 
 	return queryState
 }

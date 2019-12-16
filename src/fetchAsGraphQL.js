@@ -14,10 +14,8 @@ async function fetchAsGraphQL(query, variables = {}) {
 	} catch (error) {
 		res = {
 			fetching: false,
-			errors: [{
-				message: error.message
-			}],
-			data: null
+			errors: [{ message: error.message }],
+			data: null,
 		}
 	}
 	return res

@@ -12,7 +12,7 @@ function useLazyQuery(query) {
 	const [queryState, setQueryState] = React.useState({
 		fetching: false,
 		errors: null,
-		data: null
+		data: null,
 	})
 
 	const client = React.useContext(Context.Context)
@@ -30,15 +30,13 @@ function useLazyQuery(query) {
 			res = {
 				fetching: false,
 				errors: fetched.errors || null,
-				data: fetched.data
+				data: fetched.data,
 			}
 		} catch (error) {
 			res = {
 				fetching: false,
-				errors: [{
-					message: error.message
-				}],
-				data: null
+				errors: [{ message: error.message }],
+				data: null,
 			}
 		}
 		setQueryState(res)

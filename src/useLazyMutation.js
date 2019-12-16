@@ -12,7 +12,7 @@ function useLazyMutation(mutation) {
 	const [mutationState, setMutationState] = React.useState({
 		fetching: false,
 		errors: null,
-		data: null
+		data: null,
 	})
 
 	const client = React.useContext(Context.Context)
@@ -30,15 +30,13 @@ function useLazyMutation(mutation) {
 			res = {
 				fetching: false,
 				errors: fetched.errors || null,
-				data: fetched.data
+				data: fetched.data,
 			}
 		} catch (error) {
 			res = {
 				fetching: false,
-				errors: [{
-					message: error.message
-				}],
-				data: null
+				errors: [{ message: error.message }],
+				data: null,
 			}
 		}
 		setMutationState(res)

@@ -5,7 +5,7 @@ import React from "react"
 export const Context = React.createContext({})
 
 export const packageOptions = {
-	fetchGraphQL: null
+	fetchGraphQL: null,
 }
 
 export function Client(options) {
