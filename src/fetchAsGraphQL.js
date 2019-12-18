@@ -4,7 +4,7 @@ import nullable from "nullable"
 
 async function fetchAsGraphQL(query, variables = {}) {
 	invariant(
-		typeof mutation === "string",
+		typeof query === "string",
 		"use-graphql: `fetchAsGraphQL` expected a `query=<string>` argument.",
 	)
 	invariant(
