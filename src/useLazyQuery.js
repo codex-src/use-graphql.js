@@ -6,7 +6,7 @@ import React from "react"
 function useLazyQuery(query) {
 	invariant(
 		typeof query === "string",
-		"use-graphql: `useLazyQuery` expected a `query=<string>` argument."
+		"use-graphql: `useLazyQuery` expected a `query=<string>` argument.",
 	)
 
 	const [queryState, setQueryState] = React.useState({
@@ -21,7 +21,7 @@ function useLazyQuery(query) {
 		invariant(
 			nullable.isNonNullableObject(variables),
 			"use-graphql: `useLazyQuery` expected a `variables=<object>` argument. " +
-			"You can use `{}` or omit the argument if there’s no variables."
+			"You can use `{}` or omit the argument if there’s no variables.",
 		)
 		setQueryState({ fetching: true, errors: null, data: null })
 		let res = null

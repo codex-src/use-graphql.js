@@ -30,7 +30,7 @@ function TodosApp(props) {
 				dispatch.setState(queryState.data.todos)
 			}, 100)
 		}, [dispatch, queryState]),
-		[queryState.data]
+		[queryState.data],
 	)
 
 	const asyncHandleClickAddTodo = async e => {

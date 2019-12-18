@@ -42,11 +42,13 @@ function errorsIs(errors, targetError) {
 }
 
 async function fetchAsGraphQL(query, variables = {}) {
-  invariant(typeof packageOptions.fetch === "function", "use-graphql: `Provider` expected a `client=<object>` property. " + "Did you mean `<Provider client={new Client(options)}>`? " + "Please refer to https://git.io/JeQqg for documentation.");
+  invariant(typeof mutation === "string", "use-graphql: `fetchAsGraphQL` expected a `query=<string>` argument.");
+  invariant(nullable.isNonNullableObject(variables), "use-graphql: `fetchAsGraphQL` expected a `variables=<object>` argument. " + "You can use `{}` or omit the argument if there’s no variables.");
+  invariant(typeof packageOptions.fetchGraphQL === "function", "use-graphql: `Provider` expected a `client=<object>` property. " + "Did you mean `<Provider client={new Client(options)}>`? " + "Please refer to https://git.io/JeQqg for documentation.");
   let res = null;
 
   try {
-    res = await packageOptions.fetch(query, variables);
+    res = await packageOptions.fetchGraphQL(query, variables);
   } catch (error) {
     res = {
       fetching: false,

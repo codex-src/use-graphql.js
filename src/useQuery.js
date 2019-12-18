@@ -6,13 +6,13 @@ import React from "react"
 function useQuery(query, variables = {}) {
 	invariant(
 		typeof query === "string",
-		"use-graphql: `useQuery` expected a `query=<string>` argument."
+		"use-graphql: `useQuery` expected a `query=<string>` argument.",
 	)
 
 	invariant(
 		nullable.isNonNullableObject(variables),
 		"use-graphql: `useQuery` expected a `variables=<object>` argument. " +
-		"You can use `{}` or omit the argument if there’s no variables."
+		"You can use `{}` or omit the argument if there’s no variables.",
 	)
 
 	const [queryState, setQueryState] = React.useState({
@@ -45,7 +45,7 @@ function useQuery(query, variables = {}) {
 			}
 			effect()
 		}, [query, variables, client]),
-		[]
+		[],
 	)
 
 	return queryState

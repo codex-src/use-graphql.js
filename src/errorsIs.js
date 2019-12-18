@@ -4,7 +4,7 @@ import invariant from "invariant"
 function errorsIs(errors, targetError) {
 	invariant(
 		(errors === null || Array.isArray(errors)) && typeof targetError === "string",
-		"use-graphql: `errorsIs` expected arguments `errors=<array>` and `targetError=<string>`."
+		"use-graphql: `errorsIs` expected arguments `errors=<array>` and `targetError=<string>`.",
 	)
 	if (errors === null) {
 		return false

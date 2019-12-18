@@ -6,7 +6,7 @@ import React from "react"
 function useLazyMutation(mutation) {
 	invariant(
 		typeof mutation === "string",
-		"use-graphql: `useLazyMutation` expected a `mutation=<string>` argument."
+		"use-graphql: `useLazyMutation` expected a `mutation=<string>` argument.",
 	)
 
 	const [mutationState, setMutationState] = React.useState({
@@ -21,7 +21,7 @@ function useLazyMutation(mutation) {
 		invariant(
 			nullable.isNonNullableObject(variables),
 			"use-graphql: `useLazyMutation` expected a `variables=<object>` argument. " +
-			"You can use `{}` or omit the argument if there’s no variables."
+			"You can use `{}` or omit the argument if there’s no variables.",
 		)
 		setMutationState({ fetching: true, errors: null, data: null })
 		let res = null

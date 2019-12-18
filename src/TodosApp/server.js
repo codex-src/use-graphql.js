@@ -70,7 +70,7 @@ const rootValue = ({
 			schema,
 			rootValue,
 			graphiql: true,
-		})
+		}),
 	)
 	app.listen(4000)
 })()
