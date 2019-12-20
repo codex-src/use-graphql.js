@@ -2,6 +2,9 @@
   "name": "use-graphql",
   "version": "0.1.0",
   "main": "build/use-graphql.js",
+  "repository": "https://github.com/codex-src/use-graphql.js",
+  "author": "Zaydek Michels-Gualtieri <zaydekdotcom+codex-zaydek@gmail.com>",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
